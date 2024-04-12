@@ -1,0 +1,120 @@
+@import url(card.css);
+@import url(titlecard.css);
+body{
+    margin: 0px;
+}
+#header{
+    position: absolute;
+    position: 0px 0px;
+    width: 100vw;
+    height: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-element{
+    display: inline;
+}
+.column{
+    margin: 0 auto;
+    width: 50vw;
+    padding-top: 10%;
+    display: flex;
+}
+.description{
+    flex: 1;
+    list-style: none;
+    font-size: xx-large;
+    padding-left: 20px;
+}
+#portraitimg{
+    flex: 1;
+    padding-top: 0px;
+    width: 20vw;
+    background: rgb(207, 206, 206);
+    background: linear-gradient(90deg, rgb(151, 151, 151) 0%, rgb(222, 222, 222) 100%);
+    border-radius: 25px; 
+    transform: scale(1) rotateY(0deg) rotateX(0deg);
+    perspective: 200px;
+}
+#portrait{
+    border-radius: 25px; 
+    width: 20vw; 
+    object-fit: cover;
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, 5px -2px 15px 4px rgba(0,0,0,0); 
+    box-shadow: inset 4px 4px 15px 0px #000000, 5px -2px 15px 4px rgba(0,0,0,0);
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+.show{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.column{
+    display: flex;
+    flex-direction: row;
+}
+.column img{
+    height: 20vh;
+}
+.paragraph{
+    width: 50vw;
+    margin-right: 1vw;
+    text-align: center;
+    font-family: lato;
+    font-size: 2vw;
+    margin: 5vw;
+}
+.column{
+    display: flex;
+    flex-direction: row;
+    width: 99vw;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(129, 129, 129);
+}
+.column p{
+    width: 40vw;
+    text-align: center;
+    font-family: lato;
+    font-size: 2vw;
+    margin: 0px;
+    padding: 3vw;
+    background-color: rgb(236, 236, 236);
+}
+.column img{
+    margin: 0;
+    width: 40vw;
+    height: auto;
+    aspect-ratio: initial;
+    margin-top: 0px;
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    display: flex;
+    color: white;
+    font-family: lato;
+    padding: 1vw;
+    margin-left: 60vw;
+}
+header p{
+    padding: 1vw;
+    font-size: xx-large;
+    font-weight: 400;
+    transition: all 100ms ease-in 100ms;
+}
+header p:hover{
+    font-weight: 800;
+}
